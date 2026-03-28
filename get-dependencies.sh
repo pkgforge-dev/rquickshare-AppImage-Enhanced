@@ -13,6 +13,7 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
+export PRE_BUILD_CMDS='sed -i -e "s|webkit2gtk|webkit2gtk-4.1|" ./PKGBUILD'
 make-aur-package r-quick-share-bin
 
 # If the application needs to be manually built that has to be done down here
